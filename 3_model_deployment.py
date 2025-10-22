@@ -10,6 +10,8 @@ print("=" * 50, file=sys.stderr)
 print("LOADING MODEL FILES...", file=sys.stderr)
 print("=" * 50, file=sys.stderr)
 
+THRESHOLD = 0.109  
+
 # 모델 및 전처리 로드
 try:
     model = joblib.load("best_model_XGBoost.pkl")
@@ -138,7 +140,7 @@ def predict(args):
         X_scaled = scaler.transform(df)
         
         probs = model.predict_proba(X_scaled)[:, 1]
-        preds = (probs > 0.5).astype(int)
+        preds = (probs > THRESHOLD).astype(int)
         
         print(f"[5] Prediction done", file=sys.stderr)
         sys.stderr.flush()
