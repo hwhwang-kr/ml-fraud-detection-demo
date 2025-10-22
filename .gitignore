@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.ipynb_checkpoints/
+.bash_history
+.Rprofile
+
+# Environment
+.env
+.venv/
+venv/
+env/
+
+# Logs, cache, temp
+*.log
+*.csv
+*.json
+*.pkl
+*.joblib
+.cache/
+.local/
+.experiments/
+.explore/
+.streamlit/
+
+# Models and data
+models/
+job_logs/
+
+# IDE & OS
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+.jupyter/
+.ipython/
+
+# Credentials
+.git-credential-cache/
